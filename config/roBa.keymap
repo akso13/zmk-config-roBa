@@ -18,27 +18,62 @@
 
         tab {
             bindings = <&kp TAB>;
-            key-positions = <11 12>;
+            key-positions = <12 13>;
         };
 
         shift_tab {
             bindings = <&kp LS(TAB)>;
-            key-positions = <12 13>;
+            key-positions = <12 11>;
         };
 
-        muhennkann {
-            bindings = <&to_layer_0 INT_MUHENKAN>;
-            key-positions = <11 10>;
+        left_maru_kakko {
+            bindings = <&kp LEFT_PARENTHESIS>;
+            key-positions = <18 19>;
         };
 
-        double_quotation {
+        right_maru_kakko {
+            bindings = <&kp RIGHT_PARENTHESIS>;
+            key-positions = <19 20>;
+        };
+
+        a {
+            bindings = <&kp LEFT_BRACKET>;
+            key-positions = <30 31>;
+        };
+
+        b {
+            bindings = <&kp RIGHT_BRACKET>;
+            key-positions = <31 32>;
+        };
+
+        c {
+            bindings = <&kp LEFT_BRACE>;
+            key-positions = <6 7>;
+        };
+
+        h {
+            bindings = <&kp RIGHT_BRACE>;
+            key-positions = <7 8>;
+        };
+
+        d {
+            bindings = <&kp SQT>;
+            key-positions = <7 19>;
+        };
+
+        e {
             bindings = <&kp DOUBLE_QUOTES>;
-            key-positions = <20 21>;
+            key-positions = <19 31>;
         };
 
-        eq {
-            bindings = <&kp EQUAL>;
-            key-positions = <24 25>;
+        f {
+            bindings = <&kp COLON>;
+            key-positions = <20 8>;
+        };
+
+        g {
+            bindings = <&kp COLON>;
+            key-positions = <20 32>;
         };
     };
 
@@ -67,10 +102,10 @@
 
         default_layer {
             bindings = <
-&kp Q    &kp W  &kp E  &kp R  &kp T                                &kp Y  &kp U  &lt 5 I    &kp O    &kp P
-&kp A    &kp S  &kp D  &kp F  &kp G  &kp A          &kp MINUS      &kp H  &kp J  &kp K      &kp L    &kp SQT
-&mt A Z  &kp X  &kp C  &kp V  &kp B  &kp COLON      &kp SEMICOLON  &kp N  &kp M  &kp COMMA  &kp DOT  &kp SLASH
-&kp A    &kp A  &kp A  &kp A  &kp A  &kp A          &kp BACKSPACE  &kp A                             &kp A
+&kp Q    &kp W  &kp E  &kp R    &kp T                                        &kp Y      &kp U    &lt 2 I    &kp O    &kp P
+&kp A    &kp S  &kp D  &lt 4 F  &kp G    &kp INT2       &kp INTERNATIONAL_1  &kp H      &lt 1 J  &lt 5 K    &lt 3 L  &kp MINUS
+&mt A Z  &kp X  &kp C  &kp V    &kp B    &kp COLON      &kp BACKSPACE        &kp N      &kp M    &kp COMMA  &kp DOT  &kp SLASH
+&kp A    &kp A  &kp A  &kp A    &lt 2 B  &kp A          &kp ENTER            &kp ENTER                               &kp A
             >;
 
             sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
@@ -78,19 +113,19 @@
 
         FUNCTION {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                       &kp F1  &kp F2  &kp F3  &kp F4  &kp F5
-&trans  &trans  &trans  &trans  &trans  &trans      &kp F13  &kp F6  &kp F7  &kp F8  &kp F9  &kp F10
-&trans  &trans  &trans  &trans  &trans  &trans      &trans   &trans  &trans  &trans  &trans  &kp F11
-&trans  &trans  &trans  &trans  &trans  &trans      &trans   &trans                          &kp F12
+&trans  &trans          &trans          &trans           &trans                               &kp F1     &kp F2  &kp F3  &kp F4  &kp F5
+&trans  &trans          &kp UP_ARROW    &trans           &trans     &trans         &kp F13    &kp F6     &kp F7  &kp F8  &kp F9  &kp F10
+&trans  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans     &trans         &trans     &trans     &trans  &trans  &trans  &kp F11
+&trans  &trans          &trans          &kp LC(X)        &kp LC(C)  &kp LC(V)      &kp LC(Z)  &kp LC(Y)                          &kp F12
             >;
         };
 
         NUM {
             bindings = <
-&kp MINUS                   &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp PLUS                                                   &kp CARET         &kp AMPERSAND      &kp TILDE       &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS
-&kp SLASH                   &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp ASTERISK  &kp LC(LA(KP_NUMBER_0))      &kp UNDERSCORE  &kp EXCLAMATION   &kp AT_SIGN        &kp HASH        &kp DOLLAR            &kp PERCENT
-&mt LEFT_SHIFT KP_NUMBER_0  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp PERIOD    &kp EQUAL                    &trans          &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp LEFT_BRACE  &kp RIGHT_BRACE       &kp BACKSLASH
-&trans                      &trans           &trans           &trans           &trans        &trans                       &trans          &trans                                                                     &kp PIPE
+&kp MINUS                   &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp PLUS                                                      &kp CARET         &kp AMPERSAND      &kp TILDE       &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS
+&kp SLASH                   &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp ASTERISK     &kp LC(LA(KP_NUMBER_0))      &kp UNDERSCORE  &kp EXCLAMATION   &kp AT_SIGN        &kp HASH        &kp DOLLAR            &kp PERCENT
+&mt LEFT_SHIFT KP_NUMBER_0  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp PERIOD       &kp EQUAL                    &trans          &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp LEFT_BRACE  &kp RIGHT_BRACE       &kp BACKSLASH
+&trans                      &trans           &trans           &kp F10          &kp KP_NUMBER_0  &trans                       &trans          &trans                                                                     &kp PIPE
             >;
         };
 
