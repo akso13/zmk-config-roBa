@@ -7,108 +7,19 @@
 #define SCROLL 5
 #define NUM 6
 
-&mt {
-    flavor = "balanced";
-    quick-tap-ms = <0>;
-};
-
 / {
-    combos {
-        compatible = "zmk,combos";
-
-        tab {
-            bindings = <&kp TAB>;
-            key-positions = <12 13>;
-        };
-
-        shift_tab {
-            bindings = <&kp LS(TAB)>;
-            key-positions = <12 11>;
-        };
-
-        left_maru_kakko {
-            bindings = <&kp LEFT_PARENTHESIS>;
-            key-positions = <18 19>;
-        };
-
-        right_maru_kakko {
-            bindings = <&kp RIGHT_PARENTHESIS>;
-            key-positions = <19 20>;
-        };
-
-        a {
-            bindings = <&kp LEFT_BRACKET>;
-            key-positions = <30 31>;
-        };
-
-        b {
-            bindings = <&kp RIGHT_BRACKET>;
-            key-positions = <31 32>;
-        };
-
-        c {
-            bindings = <&kp LEFT_BRACE>;
-            key-positions = <6 7>;
-        };
-
-        h {
-            bindings = <&kp RIGHT_BRACE>;
-            key-positions = <7 8>;
-        };
-
-        d {
-            bindings = <&kp SQT>;
-            key-positions = <7 19>;
-        };
-
-        e {
-            bindings = <&kp DOUBLE_QUOTES>;
-            key-positions = <19 31>;
-        };
-
-        f {
-            bindings = <&kp COLON>;
-            key-positions = <20 8>;
-        };
-
-        g {
-            bindings = <&kp COLON>;
-            key-positions = <20 32>;
-        };
-    };
-
-    macros {
-        to_layer_0: to_layer_0 {
-            compatible = "zmk,behavior-macro-one-param";
-            #binding-cells = <1>;
-            bindings = <&to 0 &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
-            label = "TO_LAYER_0";
-        };
-    };
-
-    behaviors {
-        lt_to_layer_0: lt_to_layer_0 {
-            compatible = "zmk,behavior-hold-tap";
-            label = "LAYER_TAP_TO_0";
-            bindings = <&mo>, <&to_layer_0>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-        };
-    };
+    combos { compatible = "zmk,combos"; };
 
     keymap {
         compatible = "zmk,keymap";
 
         default_layer {
             bindings = <
-&kp Q    &kp W  &kp E  &kp R    &kp T                                        &kp Y      &kp U    &lt 2 I    &kp O    &kp P
-&kp A    &kp S  &kp D  &lt 4 F  &kp G    &kp INT2       &kp INTERNATIONAL_1  &kp H      &lt 1 J  &lt 5 K    &lt 3 L  &kp MINUS
-&mt A Z  &kp X  &kp C  &kp V    &kp B    &kp COLON      &kp BACKSPACE        &kp N      &kp M    &kp COMMA  &kp DOT  &kp SLASH
-&kp A    &kp A  &kp A  &kp A    &lt 2 B  &kp A          &kp ENTER            &kp ENTER                               &kp A
+&kp Q    &kp W  &kp E  &kp R    &kp T                                  &kp Y      &kp U    &lt 2 I    &kp O    &kp P
+&kp A    &kp S  &kp D  &lt 4 F  &kp G    &kp INT2       &kp INT_RO     &kp H      &lt 1 J  &lt 5 K    &lt 3 L  &kp MINUS
+&mt A Z  &kp X  &kp C  &kp V    &kp B    &kp COLON      &kp BACKSPACE  &kp N      &kp M    &kp COMMA  &kp DOT  &kp SLASH
+&kp A    &kp A  &kp A  &kp A    &lt 2 B  &kp A          &kp ENTER      &kp ENTER                               &kp A
             >;
-
-            sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
         };
 
         FUNCTION {
@@ -136,8 +47,6 @@
 &kp LEFT_SHIFT  &kp LG(LS(LEFT_ARROW))  &trans          &kp LG(LS(RIGHT_ARROW))  &trans   &trans      &trans  &trans  &trans  &trans  &trans  &trans
 &trans          &trans                  &trans          &trans                   &trans   &trans      &trans  &trans                          &trans
             >;
-
-            sensor-bindings = <&inc_dec_kp LC(PAGE_UP) LC(PAGE_DOWN)>;
         };
 
         MOUSE {
