@@ -44,6 +44,27 @@
             bindings = <&kp NUMBER_0 &kp NUMBER_0>;
             label = "DOUBLE0";
         };
+
+        under_score: under_score {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LANG1 &kp U &kp N &kp S &kp C &kp SPACE &kp ENTER>;
+            label = "UNDER_SCORE";
+        };
+
+        back_s: back_s {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LANG1 &kp B &kp A &kp C &kp K &kp S &kp SPACE &kp RET>;
+            label = "BACK_S";
+        };
+
+        pipe: pipe {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LANG1 &kp P &kp I &kp P &kp E &kp SPACE &kp RET>;
+            label = "PIPE";
+        };
     };
 
     keymap {
@@ -62,19 +83,19 @@
 
         FUNCTION {
             bindings = <
-&kp QUESTION  &kp DOUBLE_QUOTES  &kp EXCLAMATION  &kp UNDERSCORE   &kp TILDE                                &kp UNDERSCORE  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp F4         &kp PIPE
-&kp AT_SIGN   &kp SQT            &kp DOLLAR       &trans           &kp GRAVE      &trans         &kp MINUS  &kp HASH        &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp SEMICOLON  &kp COLON
-&trans        &kp LEFT_ARROW     &kp CARET        &kp RIGHT_ARROW  &kp BACKSLASH  &trans         &trans     &kp AMPERSAND   &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp LESS_THAN  &kp GREATER_THAN
-&trans        &trans             &trans           &kp LC(X)        &kp LC(C)      &kp LC(V)      &kp LC(Z)  &kp LC(Y)                                                                   &kp F12
+&kp QUESTION      &kp AT_SIGN     &kp EXCLAMATION  &under_score     &kp PLUS                                  &under_score  &kp RIGHT_BRACKET  &kp NON_US_BACKSLASH      &kp F4         &pipe
+&kp LEFT_BRACKET  &kp AMPERSAND   &kp DOLLAR       &trans           &kp LEFT_BRACE  &trans         &kp MINUS  &kp HASH      &kp ASTERISK       &kp LS(LEFT_PARENTHESIS)  &kp SEMICOLON  &kp SINGLE_QUOTE
+&trans            &kp LEFT_ARROW  &kp EQUAL        &kp RIGHT_ARROW  &back_s         &trans         &trans     &kp CARET     &kp RIGHT_BRACE    &kp LS(BACKSLASH)         &kp LESS_THAN  &kp GREATER_THAN
+&trans            &trans          &trans           &kp LC(X)        &kp LC(C)       &kp LC(V)      &kp LC(Z)  &kp LC(Y)                                                                 &kp F12
             >;
         };
 
         NUM {
             bindings = <
-&kp MINUS                   &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp MINUS                                  &kp F1   &kp F2   &kp F3   &kp F4         &kp F5
-&kp PERCENT                 &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp PLUS         &kp ASTERISK      &trans  &kp F6   &kp F7   &kp F8   &kp F9         &kp F10
-&mt LEFT_SHIFT KP_NUMBER_0  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp EQUAL        &kp SLASH         &trans  &kp F11  &kp F12  &kp F13  &kp LESS_THAN  &kp GREATER_THAN
-&trans                      &trans           &trans           &kp F10          &kp KP_NUMBER_0  &double0          &trans  &trans                                    &trans
+&kp MINUS                   &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp MINUS                                       &kp F1   &kp F2   &kp F3   &kp F4         &kp F5
+&kp PERCENT                 &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp COLON        &kp DOUBLE_QUOTES      &trans  &kp F6   &kp F7   &kp F8   &kp F9         &kp F10
+&mt LEFT_SHIFT KP_NUMBER_0  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp UNDER        &kp SLASH              &trans  &kp F11  &kp F12  &kp F13  &kp LESS_THAN  &kp GREATER_THAN
+&trans                      &trans           &trans           &kp F10          &kp KP_NUMBER_0  &double0               &trans  &trans                                    &trans
             >;
         };
 
