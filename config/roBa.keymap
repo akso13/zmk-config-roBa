@@ -68,12 +68,17 @@
 
         lang2 {
             bindings = <&kp LANGUAGE_2>;
-            key-positions = <38 21>;
+            key-positions = <21 39>;
         };
 
         screens {
             bindings = <&kp LG(LS(S))>;
             key-positions = <38 40>;
+        };
+
+        lang1 {
+            bindings = <&kp LANGUAGE_1>;
+            key-positions = <21 38>;
         };
     };
 
@@ -113,7 +118,7 @@
         default_layer {
             bindings = <
 &kp Q           &kp W         &kp E            &kp R      &kp T                                           &kp Y      &kp U  &kp I      &kp O    &kp P
-&mt LEFT_ALT A  &lt 5 S       &kp D            &kp F      &kp G        &kp TAB             &kp MINUS      &kp H      &kp J  &kp K      &kp L    &mt LEFT_CONTROL LANG1
+&mt LEFT_ALT A  &lt 5 S       &kp D            &kp F      &kp G        &kp TAB             &kp MINUS      &kp H      &kp J  &kp K      &kp L    &mt LEFT_CONTROL MINUS
 &kp Z           &kp X         &kp C            &kp V      &kp B        &kp LS(TAB)         &kp LG(LS(S))  &kp N      &kp M  &kp COMMA  &kp DOT  &mt LEFT_SHIFT LANGUAGE_2
 &kp LEFT_WIN    &kp QUESTION  &kp EXCLAMATION  &kp LCTRL  &lt 1 SPACE  &kp LEFT_SHIFT      &kp BACKSPACE  &kp ENTER                             &kp ESCAPE
             >;
@@ -151,7 +156,7 @@
         MOUSE {
             bindings = <
 &kp Q           &kp W      &kp E         &kp R     &kp T                                   &kp Y             &kp U     &kp I      &kp O     &kp P
-&mt LEFT_ALT A  &kp S      &kp D         &mkp MB1  &kp G   &kp TAB          &kp MINUS      &kp H             &mkp MB1  &kp K      &mkp MB2  &mt LEFT_CONTROL ENTER
+&mt LEFT_ALT A  &lt 5 S    &kp D         &mkp MB1  &kp G   &kp TAB          &kp MINUS      &kp H             &mkp MB1  &kp K      &mkp MB2  &mt LEFT_CONTROL ENTER
 &lt 2 Z         &kp X      &kp C         &kp V     &kp B   &kp LS(TAB)      &kp BACKSPACE  &kp N             &kp M     &kp COMMA  &kp DOT   &kp LSHIFT
 &kp LEFT_ALT    &kp LCTRL  &kp LEFT_GUI  &trans    &trans  &trans           &lt 3 LANG1    &lt 6 LANGUAGE_2                                 &kp PRINTSCREEN
             >;
