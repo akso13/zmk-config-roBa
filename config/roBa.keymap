@@ -58,7 +58,7 @@
 
         lang2 {
             bindings = <&kp LANGUAGE_2>;
-            key-positions = <21 39>;
+            key-positions = <39 18>;
         };
 
         screens {
@@ -68,7 +68,7 @@
 
         lang1 {
             bindings = <&kp LANGUAGE_1>;
-            key-positions = <21 38>;
+            key-positions = <38 18>;
         };
     };
 
@@ -136,10 +136,10 @@
 
         ARROW {
             bindings = <
-&kp LC(W)       &kp LC(LS(TAB))     &kp UP_ARROW        &kp LC(TAB)          &kp LC(T)                        &trans    &trans       &trans     &trans     &kp LA(F4)
-&kp HOME        &kp LEFT_ARROW      &kp DOWN_ARROW      &kp RIGHT_ARROW      &kp END    &trans      &trans    &trans    &kp LG(TAB)  &kp LC(T)  &kp LC(W)  &kp LCTRL
-&kp LEFT_SHIFT  &kp LG(LEFT_ARROW)  &kp LG(UP_ARROW)    &kp LG(RIGHT_ARROW)  &trans     &trans      &trans    &trans    &trans       &trans     &trans     &kp LEFT_ALT
-&trans          &trans              &kp LG(DOWN_ARROW)  &trans               &trans     &trans      &mkp MB4  &mkp MB5                                     &trans
+&kp LC(W)       &kp LC(LS(TAB))     &kp UP_ARROW        &kp LC(TAB)          &kp LC(T)                         &trans    &trans       &trans     &trans     &kp LA(F4)
+&kp HOME        &kp LEFT_ARROW      &kp DOWN_ARROW      &kp RIGHT_ARROW      &kp END    &trans       &trans    &trans    &kp LG(TAB)  &kp LC(T)  &kp LC(W)  &kp LCTRL
+&kp LEFT_SHIFT  &kp LG(LEFT_ARROW)  &kp LG(UP_ARROW)    &kp LG(RIGHT_ARROW)  &trans     &trans       &trans    &trans    &trans       &trans     &trans     &kp LEFT_ALT
+&trans          &trans              &kp LG(DOWN_ARROW)  &trans               &trans     &kp DEL      &mkp MB4  &mkp MB5                                     &trans
             >;
         };
 
