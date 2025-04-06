@@ -73,21 +73,21 @@
         under_score: under_score {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LANG1 &kp U &kp N &kp S &kp C &kp SPACE &kp ENTER &kp LANGUAGE_1>;
+            bindings = <&kp LANG1 &kp U &kp N &kp S &kp C &kp SPACE &kp ENTER &kp LANGUAGE_2>;
             label = "UNDER_SCORE";
         };
 
         back_s: back_s {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LANG1 &kp B &kp A &kp C &kp K &kp S &kp SPACE &kp RET &kp LANGUAGE_1>;
+            bindings = <&kp LANG1 &kp B &kp A &kp C &kp K &kp S &kp SPACE &kp RET &kp LANGUAGE_2>;
             label = "BACK_S";
         };
 
         pipe: pipe {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LANG1 &kp P &kp I &kp P &kp E &kp SPACE &kp RET>;
+            bindings = <&kp LANG1 &kp P &kp I &kp P &kp E &kp SPACE &kp RET &kp LANGUAGE_2>;
             label = "PIPE";
         };
 
@@ -103,6 +103,13 @@
             #binding-cells = <0>;
             bindings = <&kp LANG1 &kp B &kp A &kp C &kp K &kp S &kp SPACE &kp RET>;
             label = "BACKSJP";
+        };
+
+        pipejp: pipejp {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LANG1 &kp P &kp I &kp P &kp E &kp SPACE &kp RET &kp LANGUAGE_2>;
+            label = "PIPEJP";
         };
     };
 
