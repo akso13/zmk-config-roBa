@@ -36,11 +36,6 @@
             key-positions = <13 12>;
         };
 
-        layer5 {
-            bindings = <&mo 3>;
-            key-positions = <19 18>;
-        };
-
         layer6 {
             bindings = <&mo 2>;
             key-positions = <8 20>;
@@ -118,9 +113,7 @@
             compatible = "zmk,behavior-sensor-rotate";
             label = "NEW_BEHAVIOR";
             #sensor-binding-cells = <0>;
-            bindings = <&msc SCRL_UP>, <&msc SCRL_DOWN>;
-
-            tap-ms = <20>;
+            bindings = <&kp UP_ARROW>, <&kp DOWN_ARROW>;
         };
 
         new_behavior2: new_behavior2 {
@@ -131,6 +124,20 @@
 
             tap-ms = <20>;
         };
+
+        new_behavior3: new_behavior3 {
+            compatible = "zmk,behavior-sensor-rotate";
+            label = "NEW_BEHAVIOR3";
+            #sensor-binding-cells = <0>;
+            bindings = <&kp LEFT>, <&kp RIGHT>;
+        };
+
+        new_behavior4: new_behavior4 {
+            compatible = "zmk,behavior-sensor-rotate";
+            label = "NEW_BEHAVIOR4";
+            #sensor-binding-cells = <0>;
+            bindings = <&msc SCRL_UP>, <&msc SCRL_DOWN>;
+        };
     };
 
     keymap {
@@ -138,13 +145,13 @@
 
         default_layer {
             bindings = <
-&kp Q         &kp W         &kp E            &kp R      &kp T                                           &kp Y      &kp U  &kp I      &kp O    &kp P
-&kp A         &lt 5 S       &kp D            &kp F      &kp G           &none              &none        &kp H      &kp J  &kp K      &lt 6 L  &mt LEFT_CONTROL MINUS
-&kp Z         &kp X         &kp C            &kp V      &kp B           &none              &none        &kp N      &kp M  &kp COMMA  &kp DOT  &kp LEFT_ALT
-&kp LEFT_WIN  &kp QUESTION  &kp EXCLAMATION  &kp LCTRL  &kp LEFT_SHIFT  &kp BACKSPACE      &lt 1 SPACE  &kp ENTER                             &mo 5
+&kp Q         &kp W         &kp E            &kp R      &kp T                                           &kp Y      &kp U    &kp I      &kp O    &kp P
+&kp A         &lt 5 S       &kp D            &lt 4 F    &kp G           &none              &none        &kp H      &lt 3 J  &kp K      &lt 6 L  &mt LEFT_CONTROL MINUS
+&kp Z         &kp X         &kp C            &kp V      &kp B           &none              &none        &kp N      &kp M    &kp COMMA  &kp DOT  &kp LEFT_ALT
+&kp LEFT_WIN  &kp QUESTION  &kp EXCLAMATION  &kp LCTRL  &kp LEFT_SHIFT  &kp BACKSPACE      &lt 1 SPACE  &kp ENTER                               &mo 5
             >;
 
-            sensor-bindings = <&new_behavior2>;
+            sensor-bindings = <&new_behavior4>;
         };
 
         kigou {
@@ -155,7 +162,7 @@
 &trans            &trans          &trans           &trans           &trans          &trans        &trans         &trans                                                             &none
             >;
 
-            sensor-bindings = <&new_behavior>;
+            sensor-bindings = <&new_behavior4>;
         };
 
         winnum {
@@ -166,7 +173,7 @@
 &trans  &trans            &trans            &trans            &trans  &trans      &trans           &trans                                                  &trans
             >;
 
-            sensor-bindings = <&new_behavior>;
+            sensor-bindings = <&none>;
         };
 
         ARROW {
@@ -177,7 +184,7 @@
 &trans          &trans              &kp LG(DOWN_ARROW)  &trans               &trans     &kp DEL      &mkp MB4  &mkp MB5                                     &trans
             >;
 
-            sensor-bindings = <&new_behavior>;
+            sensor-bindings = <&new_behavior2>;
         };
 
         mouse {
@@ -188,7 +195,7 @@
 &kp LEFT_WIN  &kp QUESTION  &kp EXCLAMATION  &kp LCTRL  &lt 1 SPACE  &kp BACKSPACE      &lt 1 SPACE  &kp ENTER                                 &mo 5
             >;
 
-            sensor-bindings = <&new_behavior>;
+            sensor-bindings = <&new_behavior4>;
         };
 
         SCROLL {
@@ -198,6 +205,8 @@
 &trans  &trans  &trans  &trans  &trans         &trans      &trans      &trans     &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans         &trans      &kp LC(X)   &kp LC(Y)                          &trans
             >;
+
+            sensor-bindings = <&new_behavior4>;
         };
 
         NUM {
@@ -208,7 +217,7 @@
 &trans                      &trans  &trans  &kp F10  &kp N0     &kp BACKSPACE          &trans  &trans                                    &trans
             >;
 
-            sensor-bindings = <&new_behavior2>;
+            sensor-bindings = <&new_behavior3>;
         };
 
         func {
@@ -218,6 +227,8 @@
 &mt LEFT_SHIFT KP_NUMBER_0  &kp N1  &kp N2  &kp N3   &kp UNDER  &kp SLASH              &trans  &kp F11  &kp F1  &kp F2  &kp F3  &kp F12
 &trans                      &trans  &trans  &kp F10  &kp N0     &double0               &trans  &trans                           &trans
             >;
+
+            sensor-bindings = <&new_behavior>;
         };
 
         ble {
