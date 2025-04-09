@@ -6,6 +6,9 @@
 #define MOUSE 4
 #define SCROLL 5
 #define NUM 6
+#define JPYEN 0x89
+#define JPUNSC LS(0x87)
+#define JPPIPE LS(0x89)
 
 / {
     combos {
@@ -161,9 +164,9 @@
 
         kigou {
             bindings = <
-&kp QUESTION      &kp AT_SIGN     &kp EXCLAMATION  &under_score     &kp PLUS                                     &under_score  &kp RIGHT_BRACKET  &kp BACKSLASH      &none          &pipe
+&kp QUESTION      &kp AT_SIGN     &kp EXCLAMATION  &under_score     &kp PLUS                                     &under_score  &kp RIGHT_BRACKET  &kp BACKSLASH      &none          &kp JPPIPE
 &kp LEFT_BRACKET  &kp AMPERSAND   &kp DOLLAR       &trans           &kp LEFT_BRACE  &trans        &kp MINUS      &kp HASH      &kp ASTERISK       &kp LS(N9)         &kp SEMICOLON  &kp SINGLE_QUOTE
-&trans            &kp LEFT_ARROW  &kp EQUAL        &kp RIGHT_ARROW  &back_s         &backsjp      &underscorejp  &kp CARET     &kp RIGHT_BRACE    &kp LS(BACKSLASH)  &kp LESS_THAN  &kp GREATER_THAN
+&trans            &kp LEFT_ARROW  &kp EQUAL        &kp RIGHT_ARROW  &kp JPYEN         &backsjp      &kp JPUNSC  &kp CARET     &kp RIGHT_BRACE    &kp LS(BACKSLASH)  &kp LESS_THAN  &kp GREATER_THAN
 &trans            &trans          &trans           &kp F10          &trans          &trans        &trans         &trans                                                             &none
             >;
 
