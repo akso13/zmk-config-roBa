@@ -55,6 +55,11 @@
             bindings = <&kp LANGUAGE_1>;
             key-positions = <38 18>;
         };
+
+        layer9 {
+            bindings = <&mo 9>;
+            key-positions = <40 39>;
+        };
     };
 
     macros {
@@ -244,10 +249,10 @@
 
         apply {
             bindings = <
-&trans  &kp LS(LA(LC(N7)))  &kp LS(LA(LC(N8)))  &kp LS(LA(LC(N9)))  &trans                      &trans  &trans  &trans  &trans  &trans
-&trans  &kp LS(LA(LC(N4)))  &kp LS(LA(LC(N5)))  &kp LS(LA(LC(N6)))  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &kp LS(LC(LA(N1)))  &kp LS(LA(LC(N2)))  &kp LS(LA(LC(N3)))  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans              &trans              &trans              &trans  &trans      &trans  &trans                          &trans
+&trans  &kp LS(LA(LC(N7)))  &kp LS(LA(LC(N8)))  &kp LS(LA(LC(N9)))  &trans                      &trans  &kp LS(LA(LC(F7)))  &kp LS(LA(LC(F8)))  &kp LS(LA(LC(F9)))  &trans
+&trans  &kp LS(LA(LC(N4)))  &kp LS(LA(LC(N5)))  &kp LS(LA(LC(N6)))  &trans  &trans      &trans  &trans  &kp LS(LA(LC(F4)))  &kp LS(LA(LC(F5)))  &kp LS(LA(LC(F6)))  &trans
+&trans  &kp LS(LC(LA(N1)))  &kp LS(LA(LC(N2)))  &kp LS(LA(LC(N3)))  &trans  &trans      &trans  &trans  &kp LS(LA(LC(F1)))  &kp LS(LA(LC(F2)))  &kp LS(LA(LC(F3)))  &trans
+&trans  &trans              &trans              &trans              &trans  &trans      &trans  &trans                                                              &trans
             >;
 
             sensor-bindings = <&inc_dec_kp LS(LA(RC(UP_ARROW))) LS(LA(LC(DOWN)))>;
