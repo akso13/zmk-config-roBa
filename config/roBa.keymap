@@ -177,8 +177,6 @@
 &trans  &kp LG(NUMBER_1)  &kp LG(NUMBER_2)  &kp LG(NUMBER_3)  &trans  &trans      &kp RA(LC(DEL))  &trans        &trans        &trans        &trans        &trans
 &trans  &trans            &trans            &trans            &trans  &trans      &trans           &trans                                                  &trans
             >;
-
-            sensor-bindings = <&none>;
         };
 
         ARROW {
