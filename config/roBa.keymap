@@ -133,7 +133,7 @@
             #sensor-binding-cells = <0>;
             bindings = <&msc SCRL_LEFT>, <&msc SCRL_RIGHT>;
 
-            tap-ms = <200>;
+            tap-ms = <20>;
         };
 
         new_behavior3: new_behavior3 {
@@ -151,7 +151,7 @@
             #sensor-binding-cells = <0>;
             bindings = <&msc SCRL_UP>, <&msc SCRL_DOWN>;
 
-            tap-ms = <200>;
+            tap-ms = <20>;
         };
     };
 
