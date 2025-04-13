@@ -9,6 +9,7 @@
 #define JPYEN 0x89
 #define JPUNSC LS(0x87)
 #define JPPIPE LS(0x89)
+#define ZMK_MOUSE_POINTING_SCRL_VAL 100
 
 / {
     combos {
