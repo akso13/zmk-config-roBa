@@ -122,15 +122,17 @@
             label = "NEW_BEHAVIOR";
             #sensor-binding-cells = <0>;
             bindings = <&kp UP_ARROW>, <&kp DOWN_ARROW>;
+
+            tap-ms = <0>;
         };
 
         new_behavior2: new_behavior2 {
             compatible = "zmk,behavior-sensor-rotate";
             label = "NEW_BEHAVIOR2";
             #sensor-binding-cells = <0>;
-            bindings = <&msc SCRL_LEFT>, <&msc SCRL_RIGHT>;
+            bindings = <&kp LC(K_SCROLL_UP)>, <&kp LC(K_SCROLL_DOWN)>;
 
-            tap-ms = <20>;
+            tap-ms = <0>;
         };
 
         new_behavior3: new_behavior3 {
@@ -138,6 +140,8 @@
             label = "NEW_BEHAVIOR3";
             #sensor-binding-cells = <0>;
             bindings = <&kp LEFT>, <&kp RIGHT>;
+
+            tap-ms = <0>;
         };
 
         new_behavior4: new_behavior4 {
@@ -145,6 +149,8 @@
             label = "NEW_BEHAVIOR4";
             #sensor-binding-cells = <0>;
             bindings = <&kp K_SCROLL_UP>, <&kp C_AC_SCROLL_DOWN>;
+
+            tap-ms = <0>;
         };
     };
 
