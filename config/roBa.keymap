@@ -123,16 +123,16 @@
             #sensor-binding-cells = <0>;
             bindings = <&kp UP_ARROW>, <&kp DOWN_ARROW>;
 
-            tap-ms = <0>;
+            tap-ms = <1000>;
         };
 
         new_behavior2: new_behavior2 {
             compatible = "zmk,behavior-sensor-rotate";
             label = "NEW_BEHAVIOR2";
             #sensor-binding-cells = <0>;
-            bindings = <&kp LC(K_SCROLL_UP)>, <&kp LC(K_SCROLL_DOWN)>;
+            bindings = <&msc SCRL_LEFT>, <&msc SCRL_RIGHT>;
 
-            tap-ms = <0>;
+            tap-ms = <20>;
         };
 
         new_behavior3: new_behavior3 {
@@ -141,16 +141,16 @@
             #sensor-binding-cells = <0>;
             bindings = <&kp LEFT>, <&kp RIGHT>;
 
-            tap-ms = <0>;
+            tap-ms = <1000>;
         };
 
         new_behavior4: new_behavior4 {
             compatible = "zmk,behavior-sensor-rotate";
             label = "NEW_BEHAVIOR4";
             #sensor-binding-cells = <0>;
-            bindings = <&kp K_SCROLL_UP>, <&kp C_AC_SCROLL_DOWN>;
+            bindings = <&msc SCRL_UP>, <&msc SCRL_DOWN>;
 
-            tap-ms = <0>;
+            tap-ms = <20>;
         };
     };
 
@@ -159,10 +159,10 @@
 
         default_layer {
             bindings = <
-&kp Q         &kp W         &kp E            &kp R      &kp T                                            &kp Y      &kp U    &kp I      &kp O    &kp P
-&kp A         &lt 5 S       &kp D            &lt 4 F    &kp G           &mkp MB3           &kp QUESTION  &kp H      &lt 3 J  &kp K      &lt 6 L  &mt LEFT_CONTROL MINUS
-&kp Z         &kp X         &kp C            &kp V      &kp B           &kp DELETE         &kp CAPSLOCK  &kp N      &kp M    &kp COMMA  &kp DOT  &kp LEFT_ALT
-&kp LEFT_WIN  &kp QUESTION  &kp EXCLAMATION  &kp LCTRL  &kp LEFT_SHIFT  &kp BACKSPACE      &lt 1 SPACE   &kp ENTER                               &mo 5
+&kp Q         &kp W         &kp E            &kp R      &kp T                                              &kp Y      &kp U    &kp I      &kp O    &kp P
+&kp A         &lt 5 S       &kp D            &lt 4 F    &kp G           &mkp MB3           &kp LANGUAGE_2  &kp H      &lt 3 J  &kp K      &lt 6 L  &mt LEFT_CONTROL MINUS
+&kp Z         &kp X         &kp C            &kp V      &kp B           &kp DELETE         &kp LANGUAGE_1  &kp N      &kp M    &kp COMMA  &kp DOT  &kp LEFT_ALT
+&kp LEFT_WIN  &kp QUESTION  &kp EXCLAMATION  &kp LCTRL  &kp LEFT_SHIFT  &kp BACKSPACE      &lt 1 SPACE     &kp ENTER                               &mo 4
             >;
 
             sensor-bindings = <&new_behavior4>;
@@ -170,10 +170,10 @@
 
         kigou {
             bindings = <
-&kp QUESTION      &kp AT_SIGN     &kp EXCLAMATION  &kp JPUNSC     &kp PLUS                                  &under_score  &kp RIGHT_BRACKET  &kp BACKSLASH      &none          &kp JPPIPE
-&kp LEFT_BRACKET  &kp AMPERSAND   &kp DOLLAR       &trans           &kp LEFT_BRACE  &trans        &kp MINUS   &kp HASH      &kp ASTERISK       &kp LS(N9)         &kp SEMICOLON  &kp SINGLE_QUOTE
+&kp QUESTION      &kp AT_SIGN     &kp EXCLAMATION  &kp JPUNSC       &kp PLUS                                   &under_score  &kp RIGHT_BRACKET  &kp BACKSLASH      &none          &kp JPPIPE
+&kp LEFT_BRACKET  &kp AMPERSAND   &kp DOLLAR       &trans           &kp LEFT_BRACE  &trans         &kp MINUS   &kp HASH      &kp ASTERISK       &kp LS(N9)         &kp SEMICOLON  &kp SINGLE_QUOTE
 &trans            &kp LEFT_ARROW  &kp EQUAL        &kp RIGHT_ARROW  &kp JPYEN       &kp JPYEN      &kp JPUNSC  &kp CARET     &kp RIGHT_BRACE    &kp LS(BACKSLASH)  &kp LESS_THAN  &kp GREATER_THAN
-&trans            &trans          &trans           &kp F10          &trans          &trans        &trans      &trans                                                             &none
+&trans            &trans          &trans           &kp F10          &trans          &trans         &trans      &trans                                                             &none
             >;
 
             sensor-bindings = <&inc_dec_kp LS(TAB) TAB>;
