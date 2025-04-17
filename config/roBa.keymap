@@ -118,27 +118,27 @@
     };
 
     behaviors {
-        new_behavior: new_behavior {
+        vertical_arraw: vertical_arraw {
             compatible = "zmk,behavior-sensor-rotate";
-            label = "NEW_BEHAVIOR";
+            label = "VERTICAL_ARRAW";
             #sensor-binding-cells = <0>;
             bindings = <&kp UP_ARROW>, <&kp DOWN_ARROW>;
 
             tap-ms = <1>;
         };
 
-        new_behavior2: new_behavior2 {
+        virtual_desktop: virtual_desktop {
             compatible = "zmk,behavior-sensor-rotate";
-            label = "NEW_BEHAVIOR2";
+            label = "VIRTUAL_DESKTOP";
             #sensor-binding-cells = <0>;
-            bindings = <&msc SCRL_LEFT>, <&msc SCRL_RIGHT>;
+            bindings = <&kp LC(LG(RIGHT))>, <&kp LC(LG(LEFT_ARROW))>;
 
-            tap-ms = <60>;
+            tap-ms = <20>;
         };
 
-        new_behavior3: new_behavior3 {
+        horizontal_arraw: horizontal_arraw {
             compatible = "zmk,behavior-sensor-rotate";
-            label = "NEW_BEHAVIOR3";
+            label = "HORIZONTAL_ARRAW";
             #sensor-binding-cells = <0>;
             bindings = <&kp LEFT>, <&kp RIGHT>;
 
@@ -171,10 +171,10 @@
 
         kigou {
             bindings = <
-&kp QUESTION      &kp AT_SIGN     &kp EXCLAMATION  &kp JPUNSC       &kp PLUS                                   &kp JPUNSC   &kp RIGHT_BRACKET  &kp BACKSLASH      &none          &kp JPPIPE
-&kp LEFT_BRACKET  &kp AMPERSAND   &kp DOLLAR       &trans           &kp LEFT_BRACE  &trans         &kp MINUS   &kp HASH      &kp ASTERISK       &kp LS(N9)         &kp SEMICOLON  &kp SINGLE_QUOTE
-&trans            &kp LEFT_ARROW  &kp EQUAL        &kp RIGHT_ARROW  &kp JPYEN       &kp JPYEN      &kp JPUNSC  &kp CARET     &kp RIGHT_BRACE    &kp LS(BACKSLASH)  &kp LESS_THAN  &kp GREATER_THAN
-&trans            &trans          &trans           &kp F10          &trans          &trans         &trans      &trans                                                             &none
+&kp QUESTION      &kp AT_SIGN     &kp EXCLAMATION  &kp JPUNSC       &kp PLUS                                    &kp JPUNSC  &kp RIGHT_BRACKET  &kp BACKSLASH      &none          &kp JPPIPE
+&kp LEFT_BRACKET  &kp AMPERSAND   &kp DOLLAR       &trans           &kp LEFT_BRACE  &kp LS(N8)      &kp MINUS   &kp HASH    &kp ASTERISK       &kp LS(N9)         &kp SEMICOLON  &kp SINGLE_QUOTE
+&trans            &kp LEFT_ARROW  &kp EQUAL        &kp RIGHT_ARROW  &kp JPYEN       &kp JPYEN       &kp JPUNSC  &kp CARET   &kp RIGHT_BRACE    &kp LS(BACKSLASH)  &kp LESS_THAN  &kp GREATER_THAN
+&trans            &trans          &trans           &kp F10          &trans          &trans          &trans      &trans                                                           &none
             >;
 
             sensor-bindings = <&inc_dec_kp LS(TAB) TAB>;
@@ -182,24 +182,24 @@
 
         winnum {
             bindings = <
-&trans  &kp LG(NUMBER_7)  &kp LG(NUMBER_8)  &kp LG(NUMBER_9)  &trans                               &trans  &trans  &trans  &trans  &trans
-&trans  &kp LG(NUMBER_4)  &kp LG(NUMBER_5)  &kp LG(NUMBER_6)  &trans  &trans      &trans           &trans  &trans  &trans  &trans  &trans
-&trans  &kp LG(NUMBER_1)  &kp LG(NUMBER_2)  &kp LG(NUMBER_3)  &trans  &trans      &kp RA(LC(DEL))  &trans  &trans  &trans  &trans  &trans
-&trans  &trans            &trans            &trans            &trans  &trans      &trans           &trans                          &trans
+&trans  &kp LG(NUMBER_7)  &kp LG(NUMBER_8)  &kp LG(NUMBER_9)  &trans                                       &trans  &trans  &trans  &trans  &trans
+&trans  &kp LG(NUMBER_4)  &kp LG(NUMBER_5)  &kp LG(NUMBER_6)  &trans  &kp LC(LG(D))       &trans           &trans  &trans  &trans  &trans  &trans
+&trans  &kp LG(NUMBER_1)  &kp LG(NUMBER_2)  &kp LG(NUMBER_3)  &trans  &kp LC(LG(F4))      &kp RA(LC(DEL))  &trans  &trans  &trans  &trans  &trans
+&trans  &trans            &trans            &trans            &trans  &trans              &trans           &trans                          &trans
             >;
 
-            sensor-bindings = <&new_behavior>;
+            sensor-bindings = <&virtual_desktop>;
         };
 
         ARROW {
             bindings = <
-&kp LC(W)       &kp LC(LS(TAB))     &kp UP_ARROW        &kp LC(TAB)          &kp LC(T)                          &trans    &trans       &kp LC(X)  &kp LC(Z)  &kp LA(F4)
-&kp HOME        &kp LEFT_ARROW      &kp DOWN_ARROW      &kp RIGHT_ARROW      &kp END    &mkp MB3      &trans    &trans    &kp LG(TAB)  &kp LC(C)  &kp LC(V)  &kp LCTRL
-&kp LEFT_SHIFT  &kp LG(LEFT_ARROW)  &kp LG(UP_ARROW)    &kp LG(RIGHT_ARROW)  &trans     &trans        &trans    &trans    &trans       &trans     &kp LC(Y)  &kp LEFT_ALT
-&trans          &trans              &kp LG(DOWN_ARROW)  &kp LCTRL            &trans     &kp DEL       &mkp MB4  &mkp MB5                                     &trans
+&kp LC(W)         &kp LC(LS(TAB))     &kp UP_ARROW        &kp LC(TAB)          &kp LC(T)                                     &trans    &trans  &kp LC(X)  &kp LC(Z)  &kp LC(A)
+&kp HOME          &kp LEFT_ARROW      &kp DOWN_ARROW      &kp RIGHT_ARROW      &kp END            &kp LG(TAB)      &trans    &trans    &trans  &kp LC(C)  &kp LC(V)  &kp LCTRL
+&kp LS(LG(LEFT))  &kp LG(LEFT_ARROW)  &kp LG(UP_ARROW)    &kp LG(RIGHT_ARROW)  &kp LS(LG(RIGHT))  &kp LA(F4)       &trans    &trans    &trans  &trans     &kp LC(Y)  &kp LEFT_ALT
+&trans            &trans              &kp LG(DOWN_ARROW)  &kp LCTRL            &trans             &kp DEL          &mkp MB4  &mkp MB5                                &trans
             >;
 
-            sensor-bindings = <&new_behavior2>;
+            sensor-bindings = <&horizontal_arraw>;
         };
 
         mouse {
@@ -232,7 +232,7 @@
 &trans                      &trans  &trans  &kp F10  &mt LEFT_SHIFT N0  &kp BACKSPACE      &trans  &trans                          &trans
             >;
 
-            sensor-bindings = <&new_behavior3>;
+            sensor-bindings = <&horizontal_arraw>;
         };
 
         func {
@@ -243,7 +243,7 @@
 &trans                      &trans  &trans  &kp F10  &kp N0     &double0         &trans  &trans                           &trans
             >;
 
-            sensor-bindings = <&new_behavior>;
+            sensor-bindings = <&vertical_arraw>;
         };
 
         ble {
